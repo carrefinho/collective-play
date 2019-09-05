@@ -1,3 +1,8 @@
-for (let i = 0; i++; i < 5) {
-    console.log('yikes');
-}
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('hello world');
+})
+
+app.listen(4000);
