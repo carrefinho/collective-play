@@ -1,0 +1,36 @@
+shout out to early playtesters: haruhi and zhruang
+
+
+
+credits:
+
+- p5.collide2d by Ben Moren
+---- https://github.com/bmoren/p5.collide2D
+
+- js-cookie
+---- https://github.com/js-cookie/js-cookie
+
+
+
+ver 1.0
+- first fully working version
+- hurahh
+
+ver 1.01
+- fixed gamebreaking glitch
+
+ver 1.02
+- gameplay tweaks
+
+ver 1.03
+- added tutorial
+
+ver 1.04
+- added retry button
+- added high score
+
+ver 1.05
+- added wasd support
+
+ver 1.06
+- added cookies to store highscore
