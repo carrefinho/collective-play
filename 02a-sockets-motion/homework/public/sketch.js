@@ -12,6 +12,7 @@ function setup() {
 
     Pressure.set('#defaultCanvas0', {
         change: function(force){
+            // relative position
             let x = mouseX / width;
             let y = mouseY / height;
 
@@ -36,6 +37,7 @@ function setup() {
             user.pressure = data.pressure;
             user.position = data.position;
         } else {
+            // randomly generate a color for each user
             let hue = floor(random(256));
             console.log(hue);
             users[id] = {
@@ -53,6 +55,8 @@ function draw() {
     for (let u in users) {
         let user = users[u];
         let position = user.position;
+
+        // convert pressure into radius
         let radius = map(user.pressure, 0, 1, 3, Math.max(width, height) / 20)
         
         colorMode(HSL, 255);
