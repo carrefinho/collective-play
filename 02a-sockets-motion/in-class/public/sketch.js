@@ -1,5 +1,6 @@
 // Open and connect socket
 let socket = io();
+let users;
 
 // Listen for confirmation of connection
 socket.on('connect', function() {
@@ -11,7 +12,7 @@ function setup(){
   background(255);
 
   // Receive message from server
-  socket.on('data', (pos) => {
+  socket.on('message', (message) => {
     fill(0);
     ellipse(pos.x, pos.y, 10, 10);
   });

@@ -24,10 +24,15 @@ io.sockets.on('connection',
     // Listen for data from this client
 		socket.on('data', function(data) {
       // Data can be numbers, strings, objects
-			console.log("Received: 'data' " + data);
+			let message = {
+				id: socket.id,
+				data: data
+			}
+
+			console.log("Received: 'data' " + message);
 
 			// Send it to all clients, including this one
-			io.sockets.emit('data', data);
+			io.sockets.emit('message', message);
 
       // Send it to all other clients, not including this one
       //socket.broadcast.emit('data', data);
