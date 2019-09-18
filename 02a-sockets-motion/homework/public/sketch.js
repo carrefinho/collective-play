@@ -47,6 +47,10 @@ function setup() {
             }
         }
     })
+
+    socket.on('left', (id) => {
+        if (id in users) delete users[id];
+    })
 }
 
 function draw() {

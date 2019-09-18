@@ -25,7 +25,8 @@ io.sockets.on('connection', (socket) => {
         io.sockets.emit('message', message);
     })
 
-    socket.on('disconnect', () => {
+    socket.on('disconnect', (socket) => {
         console.log('bye ' + socket.id);
-    })
+        io.sockets.emit('left', socket.id);
+    });
 })
