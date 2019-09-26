@@ -1,3 +1,9 @@
+// this sketch catches the user's distance to the screen
+// which I think somewhat represents the level of focus and in a sense mood
+// the distance is measured with the distance between their two eyes with clmtracker's face detection
+// it is calibrated with my own seating position etc. that when I put my back completely on the chair it's all green
+// while when I get reasonably close say to inspect a line of code it gets red
+
 let cnv, capture;
 let ctracker;
 
