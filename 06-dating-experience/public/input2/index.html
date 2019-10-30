@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script type="text/javascript">
+        let socket = io('/input2');
+
+        socket.on('connect', () => {
+            console.log('connected');
+        });
+
+        function draw() {
+            let y = mouseY / windowHeight;
+            socket.emit('move', {
+                y: y
+            })
+        };
+
+        function mousePressed() {
+            socket.emit('click');
+        }
+    </script>
+    <h1>you aren't supposed to look here mate</h1>
+</body>
+
+</html>
