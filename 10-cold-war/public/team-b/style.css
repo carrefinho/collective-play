@@ -1,0 +1,92 @@
+body, html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.faction-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: 50% 50%;
+}
+
+.faction {
+    padding: 32px 48px 32px 48px;
+}
+
+#them {
+    background-color: #35161b;
+}
+
+#us {
+    background-color: #365e59;
+}
+
+.faction .name {
+    font-family: "SF Pro Text";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.25em;
+    color: white;
+    opacity: 50%;
+}
+
+.action-container {
+    color: white;
+    height: 75%;
+    display: grid;
+    grid-template-columns: 10% 40% 10% 30%;
+    grid-template-rows: 100%;
+}
+
+.action {
+    height: 100%;
+    vertical-align: center;
+    font-family: "SF Pro Display";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2em;
+    padding: 12px 12px 12px 12px;
+}
+
+select {
+    font-family: "SF Pro Display";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1em;
+    color: white;
+    background: none;
+    outline: 0px;
+    border: 0px;
+
+}
+
+select option {
+    color: black;
+}
+
+button {
+    outline: 0px;
+    border: 0px;
+    background: none;
+    font-family: "SF Pro Display";
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2em;
+    color: white;
+    opacity: 75%;
+    position: absolute;
+    right: 64px;
+    text-decoration: underline white;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 100%;
+}
+
+.disabled {
+    opacity: 25%;
+}

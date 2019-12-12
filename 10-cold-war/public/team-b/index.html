@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sf-full.css">
+</head>
+
+<body>
+    <div class="faction-container">
+        <div class="faction" id="them">
+            <h3 class="name">TEAM A</h3>
+            <div class="action-container">
+                <div class="action a1">someone</div>
+                <div class="action a2" id="op-action">do something with</div>
+                <div class="action a3">someone</div>
+                <div class="action a4">for some time</div>
+            </div>
+            <button id="done" disabled>done</button>
+        </div>
+        <div class="faction disabled" id="us">
+            <h3 class="name">TEAM B (YOU'RE HERE)</h3>
+            <div class="action-container">
+                <div class="action a1">A1</div>
+                <div class="action a2">
+                    <select></select>
+                </div>
+                <div class="action a3">A2</div>
+                <div class="action a4">for 10s</div>
+            </div>
+            <button id="go" disabled>go</button>
+        </div>
+    </div>
+</body>
+
+</html>
